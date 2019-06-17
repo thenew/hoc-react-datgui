@@ -115,12 +115,12 @@ exports.default = function (WrappedComponent) {
         }
         return _react2.default.createElement(
           'div',
-          null,
+          { style: { position: 'relative' } },
           _react2.default.createElement('div', {
             ref: function ref(e) {
               _this.container = e;
             },
-            style: { position: 'absolute', right: '0px' }
+            style: { position: 'absolute', right: '0px', top: '0px', zIndex: '2' }
           }),
           _react2.default.createElement(WrappedComponent, _extends({}, _this.props, _this.state))
         );

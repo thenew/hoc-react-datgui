@@ -73,12 +73,12 @@ export default (WrappedComponent, model = {}) =>
         return <WrappedComponent {...this.props} />
       }
       return (
-        <div>
+        <div style={{position: 'relative'}}>
           <div
             ref={(e) => {
               this.container = e
             }}
-            style={{ position: 'absolute', right: '0px' }}
+            style={{ position: 'absolute', right: '0px', top: '0px', zIndex: '2' }}
           />
           <WrappedComponent {...this.props} {...this.state} />
         </div>
